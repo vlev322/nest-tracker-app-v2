@@ -31,7 +31,7 @@ header
 
 .main-wrapper
   >section
-    padding: 50px
+    padding: 25px
     height: 100%
     &:first-child
       height: 100vh
@@ -81,6 +81,7 @@ header
     transition: all 0.5s ease
     margin-left: 20px
     text-align: right
+    margin-bottom: 20px
     img
       width: 100%
       transition: all 0.5s ease
@@ -112,7 +113,7 @@ header
 
 // slider
 .slider-container
-  width: 75%
+  width: 80%
   margin: 0 auto
   position: relative
   .control-left, .control-right
@@ -163,7 +164,7 @@ header
 
 .thumbnails-wrapper
   margin: 0 auto
-  width: 75%
+  width: 80%
   margin-bottom: 50px
   #scroller
     position: relative
@@ -255,9 +256,10 @@ form
       color: #000000
     &:-ms-input-placeholder
       color: #000000
-  div
+      margin-bottom: 30px
     input:last-child
       margin-right: 0
+      // margin-bottom: 0
   button
     text-transform: uppercase
     background-color: rgb(237, 213, 90)
@@ -336,6 +338,10 @@ form
       max-width: 330px
       margin-right: 20px
 @media only screen and (max-width : 768px)
+  .slider-container
+    width: 100%
+  .thumbnails-wrapper
+    width: 80%
   .main-wrapper >section
     &:first-child
       h1
@@ -348,6 +354,8 @@ form
   header ul li
     margin-right: 15px
     font-size: 14px
+  header img
+    height: 60px
   .thumbnails-wrapper
     max-width: 750px
     margin-top: 20px
@@ -356,12 +364,13 @@ form
   .thumbnails div
     height: 150px
     width: 250px
-  .slides-page div
-    height: 53vh
   form
     margin-left: 22%
     div
       margin-right: 20px
+      margin-bottom: 30px
+      input:last-child
+        margin-bottom: 0
     .textarea
       max-width: 330px
       margin-right: 20px
@@ -372,6 +381,11 @@ form
   .contact-us
     aside
       width: 21%
+  .main-wrapper
+    >section
+      &:first-child
+        >div section img
+          height: 60px
 @media only screen and (max-width : 640px)
   .slider-container
     .control-left, .control-right
@@ -381,13 +395,6 @@ form
   .thumbnails div
     height: 120px
     width: 200px
-  .slides-page
-    padding: 0
-    div
-      height: 38vh
-      text-align: center
-      &:last-child
-        margin-top: -100px
   form
     margin-left: 30%
     div
@@ -428,13 +435,6 @@ form
   .thumbnails div
     height: 80px
     width: 130px
-  .slides-page
-    div
-      height: 30vh
-      text-align: center
-      max-width: 400px
-      &:last-child
-        margin-top: -100px
   form
     margin: auto
     margin-bottom: 20px
