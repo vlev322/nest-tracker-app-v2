@@ -13,11 +13,11 @@ for (let i = 1; i <= 32; i++) {
   const div = document.createElement("div");
   const img = document.createElement("img");
   img.setAttribute("src", "./assets/img/slides/Nest Tracker App Presentation- Page-" + i + ".jpg");
-  // img.setAttribute("src", `./assets/img/slides/Nest Tracker App Presentation- Page-${[i]}.jpg`);
   thumbnails.appendChild(div).appendChild(img);
 }
 
 const thumbnailItems = thumbnails.querySelectorAll("div");
+
 //controll from slider
 let current = 1;
 const isOutside = function (pos) {
@@ -48,22 +48,15 @@ scrollThumb.ondragstart = function () {
 };
 
 scrollThumb.onmousedown = function (e) {
+  const avalibleWidthThumb = thumbnailsWrapper.getBoundingClientRect().width;
   const shiftX = e.pageX - scrollThumb.getBoundingClientRect().left + thumbnailsWrapper.getBoundingClientRect().left;
 
-  function moveAt(e) {
-    const avalibleWidthThumb = thumbnailsWrapper.getBoundingClientRect().width;
+  document.onmousemove = function (e) {
     const left = e.clientX - shiftX;
-
-    if (left >= 0 && left <= avalibleWidthThumb) {
-      const persThumb = (left / avalibleWidthThumb) * 100;
-      const scrollThumbnails = (thumbnails.scrollWidth * persThumb) / 100;
-      thumbnails.scrollLeft = scrollThumbnails;
+    if (left >= 0 && left <= avalibleWidthThumb - scrollThumb.getBoundingClientRect().width + 5) {
+      thumbnails.scrollLeft = (thumbnails.scrollWidth * ((left / avalibleWidthThumb) * 100)) / 100;
       scrollThumb.style.left = left + "px";
     }
-  }
-
-  document.onmousemove = function (e) {
-    moveAt(e);
   };
 
   scrollThumb.onmouseup = function () {
@@ -76,17 +69,12 @@ scrollThumb.onmousedown = function (e) {
 
 thumbnails.onmousedown = function () {
   let pageX = 0;
-
   document.onmousemove = function (e) {
     if (pageX !== 0) {
+      const persNum = (thumbnails.scrollLeft / (thumbnails.scrollWidth + thumbnails.getBoundingClientRect().width)) * 100;
       thumbnails.scrollLeft = thumbnails.scrollLeft + (pageX - e.pageX);
-
-      const avalibleWidth =
-        thumbnailsWrapper.getBoundingClientRect().width + scrollThumb.getBoundingClientRect().width * 2.5;
-      const persNum =
-        (thumbnails.scrollLeft / (thumbnails.scrollWidth + thumbnails.getBoundingClientRect().width)) * 100;
-      const left = (avalibleWidth * persNum) / 100;
-      scrollThumb.style.left = left + "px";
+      scrollThumb.style.left =
+        ((thumbnailsWrapper.getBoundingClientRect().width + scrollThumb.getBoundingClientRect().width + 10) * persNum) / 100 + "px";
     }
     pageX = e.pageX;
   };
@@ -97,13 +85,12 @@ thumbnails.onmousedown = function () {
   thumbnails.onmouseleave = function () {
     document.onmousemove = null;
   };
-
   thumbnails.ondragstart = function () {
     return false;
   };
 };
 
-//fullscreenImg
+//fullscreen img
 for (let i = 0; i < thumbnailItems.length; i++) {
   const thumb = thumbnailItems[i];
   const img = thumb.querySelector("img");
