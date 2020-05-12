@@ -1,7 +1,7 @@
 @charset "UTF-8";
 html, body { margin: 0; padding: 0; }
 
-body { font-family: Montserrat; font-weight: bold; color: #000; background-color: rgba(0, 255, 255, 0.06); }
+body { font-family: Montserrat; font-weight: bold; color: #000; background-color: rgba(0, 255, 255, 0.06); -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 
 header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: #edd55a; padding-left: 50px; }
 header ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
@@ -10,10 +10,10 @@ header ul li a { white-space: nowrap; text-decoration: none; color: #000000; }
 header img { height: 80px; width: auto; }
 
 .main-wrapper > section { padding: 25px; height: 100%; }
-.main-wrapper > section:first-child { height: 100%; margin: 0; padding: 0; padding-bottom: 30px; background-image: url("../assets/img/bg_&_logos/welcome_bg.jpg"); background-size: cover; background-position-y: 60%; }
+.main-wrapper > section:first-child { height: 100%; margin: 0; padding: 0; padding-bottom: 90px; background-image: url("../assets/img/bg_&_logos/welcome_bg.jpg"); background-size: cover; background-position-y: 60%; }
 .main-wrapper > section:first-child h1 { font-size: 48px; margin: 0px; text-transform: uppercase; font-weight: bolder; }
 .main-wrapper > section:first-child h2 { font-size: 25px; margin-top: 15px; font-weight: bolder; }
-.main-wrapper > section:first-child > div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-top: 30px; font-size: 40px; }
+.main-wrapper > section:first-child > div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-top: 100px; font-size: 40px; }
 .main-wrapper > section:first-child > div img { max-height: 650px; width: auto; }
 .main-wrapper > section:first-child > div section { text-align: center; margin-left: 110px; }
 .main-wrapper > section:first-child > div section img { height: 100px; width: auto; }
@@ -21,7 +21,7 @@ header img { height: 80px; width: auto; }
 .main-wrapper > section:last-child { margin: 0; padding: 0; background-image: url("../assets/img/bg_&_logos/сontact_us_bg.jpg"); background-size: cover; }
 
 .slides-page { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; padding-bottom: 20px; }
-.slides-page div { -webkit-transition: all 0.5s ease; transition: all 0.5s ease; margin-left: 20px; text-align: right; margin-bottom: 20px; }
+.slides-page div { margin-bottom: 20px; }
 .slides-page div img { width: 100%; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; border-radius: 5px; }
 
 .slider-container { width: 80%; margin: 0 auto; position: relative; }
@@ -47,30 +47,28 @@ header img { height: 80px; width: auto; }
 
 section.contact-us { height: 100%; min-height: 100vh; }
 
-.contact-us { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+.contact-us { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
 .contact-us aside { position: absolute; left: 0; top: 0; width: 18%; background-color: rgba(255, 255, 255, 0.6); height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 0 5px; }
 .contact-us aside img { margin-top: 100px; height: 80px; width: auto; }
 .contact-us aside a { text-decoration: none; color: #000000; font-weight: 500; font-size: 15px; margin-top: 20px; }
 .contact-us aside h3 { margin-bottom: 0; font-size: 18px; }
 .contact-us aside section { margin-top: 30px; text-align: center; }
-.contact-us aside section p { margin: 0; font-weight: 500; }
+.contact-us aside section p { margin: 0; margin-top: 10px; font-weight: 500; }
 .contact-us aside section h3 { font-size: 16px; }
 
-form { max-width: 805px; margin-left: 20%; }
+form { max-width: 805px; margin-left: 23%; margin-top: 100px; }
 form h2 { font-size: 40px; text-align: center; font-weight: bolder; }
-form div input { height: 40px; width: 330px; background-color: #ffffff; padding-left: 5px; font-size: 16px; margin-bottom: 30px; border: none; margin-right: 35px; }
+form div input { height: 45px; width: 330px; background-color: #ffffff; padding-left: 5px; font-size: 16px; margin-bottom: 40px; border: none; margin-right: 40px; }
 form div input::-webkit-input-placeholder { color: #000000; }
 form div input::-moz-placeholder { color: #000000; }
 form div input:-moz-placeholder { color: #000000; }
 form div input:-ms-input-placeholder { color: #000000; margin-bottom: 30px; }
 form div input input:last-child { margin-right: 0; }
 form button { text-transform: uppercase; background-color: #edd55a; padding: 40px 90px; font-weight: bold; font-size: 18px; margin-top: 25px; border: none; cursor: pointer; }
-form .textarea { width: 707px; height: 80px; padding-top: 10px; padding-left: 5px; font: medium -moz-fixed; font: -webkit-small-control; resize: both; overflow: auto; background-color: #fff; font-size: 16px; margin-right: 0; }
+form .textarea { width: 707px; height: 100px; padding-top: 10px; padding-left: 5px; font: medium -moz-fixed; font: -webkit-small-control; resize: both; overflow: auto; background-color: #fff; font-size: 16px; margin-right: 0; }
 
 @media only screen and (max-width: 1200px) { .main-wrapper > section:first-child h1 { font-size: 40px; }
-  .main-wrapper > section:first-child > div img { height: 400px; }
-  form div input { margin-right: 15px; }
-  form .textarea { max-width: 688px; } }
+  .main-wrapper > section:first-child > div img { height: 400px; } }
 @media only screen and (max-width: 992px) { .thumbnails-wrapper { max-width: 900px; }
   .main-wrapper > section:first-child h1 { font-size: 30px; }
   .main-wrapper > section:first-child > div img { height: 350px; }
@@ -84,16 +82,18 @@ form .textarea { width: 707px; height: 80px; padding-top: 10px; padding-left: 5p
   form div { margin-right: 20px; }
   form .textarea { max-width: 330px; margin-right: 20px; } }
 @media only screen and (max-width: 768px) { .slider-container { width: 100%; }
-  .thumbnails-wrapper { width: 80%; }
+  .thumbnails-wrapper { width: 100%; }
+  .main-wrapper > section:first-child { padding-bottom: 30px; }
   .main-wrapper > section:first-child h1 { font-size: 25px; }
   .main-wrapper > section:first-child h2 { font-size: 18px; }
+  .main-wrapper > section:first-child > div { margin-top: 50px; }
   .main-wrapper > section:first-child > div img { height: 300px; }
   header ul li { margin-right: 15px; font-size: 14px; }
   header img { height: 60px; }
   .thumbnails-wrapper { max-width: 750px; margin-top: 20px; }
   .thumbnails-wrapper #scroller { display: none; }
   .thumbnails div { height: 150px; width: 250px; }
-  form { margin-left: 22%; }
+  form { margin-left: 30%; }
   form div { margin-right: 20px; margin-bottom: 30px; }
   form div input:last-child { margin-bottom: 0; }
   form .textarea { max-width: 330px; margin-right: 20px; }
@@ -104,14 +104,14 @@ form .textarea { width: 707px; height: 80px; padding-top: 10px; padding-left: 5p
 @media only screen and (max-width: 640px) { .slider-container .control-left, .slider-container .control-right { font-size: 60px; }
   .thumbnails-wrapper { max-width: 630px; }
   .thumbnails div { height: 120px; width: 200px; }
-  form { margin-left: 30%; }
+  form { margin-left: 35%; }
   form div { margin-right: 20px; }
   form div input { width: 250px; }
   form .textarea { max-width: 250px; margin-right: 20px; }
   form button { margin-right: 20px; }
   form h2 { font-size: 25px; }
   .contact-us aside { width: 29%; } }
-@media only screen and (max-width: 480px) { .main-wrapper > section:first-child > div { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+@media only screen and (max-width: 480px) { .main-wrapper > section:first-child > div { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 30px; }
   .main-wrapper > section:first-child > div section { margin: auto; }
   header { padding-left: 5px; }
   header ul { padding-left: 0; }
@@ -120,11 +120,11 @@ form .textarea { width: 707px; height: 80px; padding-top: 10px; padding-left: 5p
   .thumbnails-wrapper { max-width: 450px; }
   .thumbnails div { height: 80px; width: 130px; }
   form { margin: auto; margin-bottom: 20px; }
-  form div { margin-right: 10px; }
-  form div input { width: 230px; }
-  form .textarea { max-width: 230px; margin-right: 10px; }
+  form div { width: 100%; margin-right: 0; }
+  form div input { width: 100%; margin-left: 5px; }
+  form .textarea { width: 100%; max-width: 100%; margin-right: 10px; }
   form button { margin-right: 10px; font-size: 16px; padding: 40px 95px; }
-  form h2 { font-size: 18px; }
+  form h2 { font-size: 22px; }
   .contact-us { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-  .contact-us aside { width: auto; position: relative; width: 100%; }
+  .contact-us aside { width: auto; position: relative; width: 97%; padding-bottom: 20px; }
   .contact-us aside img { margin: 0; } }

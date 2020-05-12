@@ -8,7 +8,7 @@ body
   font-weight: bold
   color: #000
   background-color: rgba(000, 255, 255, .06)
-
+  transition: all 0.5s ease
 header
   display: flex
   justify-content: space-between
@@ -37,7 +37,7 @@ header
       height: 100%
       margin: 0
       padding: 0
-      padding-bottom: 30px
+      padding-bottom: 90px
       background-image: url('../assets/img/bg_&_logos/welcome_bg.jpg')
       background-size: cover
       background-position-y: 60%
@@ -54,7 +54,7 @@ header
         display: flex
         justify-content: center
         align-items: flex-start
-        margin-top: 30px
+        margin-top: 100px
         font-size: 40px
         img
           max-height: 650px
@@ -79,38 +79,11 @@ header
   transition: all 0.5s ease
   padding-bottom: 20px
   div
-    transition: all 0.5s ease
-    margin-left: 20px
-    text-align: right
     margin-bottom: 20px
     img
       width: 100%
       transition: all 0.5s ease
       border-radius: 5px
-
-// .slides-page
-//   display: flex
-//   flex-direction: column
-//   transition: all 0.5s ease
-//   padding-bottom: 20px
-//   div
-//     transition: all 0.5s ease
-//     height: 60vh
-//     margin-left: 20px
-//     text-align: right
-//     img
-//       height: 100%
-//       transition: all 0.5s ease
-//       width: auto
-//       border-radius: 5px
-//     &:hover
-//       z-index: 1
-//       margin-right: -30px
-//       margin-top: -20px
-//     &:last-child
-//       text-align: left
-//       transition: all 0.5s ease
-//       margin-top: -200px
 
 // slider
 .slider-container
@@ -200,7 +173,7 @@ section.contact-us
 .contact-us
   position: relative
   display: flex
-  align-items: center
+  // align-items: center
   justify-content: flex-start
   aside
     position: absolute
@@ -232,37 +205,40 @@ section.contact-us
       text-align: center
       p
         margin: 0
+        margin-top: 10px
         font-weight: 500
       h3
         font-size: 16px
 form
   max-width: 805px
-  margin-left: 20%
+  margin-left: 23%
+  margin-top: 100px
   h2
     font-size: 40px
     text-align: center
     font-weight: bolder
-  div input
-    height: 40px
-    width: 330px
-    background-color: #ffffff
-    padding-left: 5px
-    font-size: 16px
-    margin-bottom: 30px
-    border: none
-    margin-right: 35px
-    &::-webkit-input-placeholder
-      color: #000000
-    &::-moz-placeholder
-      color: #000000
-    &:-moz-placeholder
-      color: #000000
-    &:-ms-input-placeholder
-      color: #000000
-      margin-bottom: 30px
-    input:last-child
-      margin-right: 0
-      // margin-bottom: 0
+  div
+    input
+      height: 45px
+      width: 330px
+      background-color: #ffffff
+      padding-left: 5px
+      font-size: 16px
+      margin-bottom: 40px
+      border: none
+      margin-right: 40px
+      &::-webkit-input-placeholder
+        color: #000000
+      &::-moz-placeholder
+        color: #000000
+      &:-moz-placeholder
+        color: #000000
+      &:-ms-input-placeholder
+        color: #000000
+        margin-bottom: 30px
+      input:last-child
+        margin-right: 0
+        // margin-bottom: 0
   button
     text-transform: uppercase
     background-color: rgb(237, 213, 90)
@@ -274,7 +250,7 @@ form
     cursor: pointer
   .textarea
     width: 707px
-    height: 80px
+    height: 100px
     padding-top: 10px
     padding-left: 5px
     font: medium -moz-fixed
@@ -294,11 +270,6 @@ form
       >div
         img
           height: 400px
-  form
-    div input
-      margin-right: 15px
-    .textarea
-      max-width: 688px
 
 // Medium Devices, Desktops
 @media only screen and (max-width : 992px)
@@ -344,14 +315,16 @@ form
   .slider-container
     width: 100%
   .thumbnails-wrapper
-    width: 80%
+    width: 100%
   .main-wrapper >section
     &:first-child
+      padding-bottom: 30px
       h1
         font-size: 25px
       h2
         font-size: 18px
       >div
+        margin-top: 50px
         img
           height: 300px
   header ul li
@@ -368,7 +341,7 @@ form
     height: 150px
     width: 250px
   form
-    margin-left: 22%
+    margin-left: 30%
     div
       margin-right: 20px
       margin-bottom: 30px
@@ -399,7 +372,7 @@ form
     height: 120px
     width: 200px
   form
-    margin-left: 30%
+    margin-left: 35%
     div
       margin-right: 20px
       input
@@ -421,6 +394,7 @@ form
       >div
         flex-direction: column-reverse
         align-items: center
+        margin-top: 30px
         section
           margin: auto
   header
@@ -442,24 +416,28 @@ form
     margin: auto
     margin-bottom: 20px
     div
-      margin-right: 10px
+      width: 100%
+      margin-right: 0
       input
-        width: 230px
+        width: 100%
+        margin-left: 5px
     .textarea
-      max-width: 230px
+      width: 100%
+      max-width: 100%
       margin-right: 10px
     button
       margin-right: 10px
       font-size: 16px
       padding: 40px 95px
     h2
-      font-size: 18px
+      font-size: 22px
   .contact-us
     flex-direction: column
     aside
       width: auto
       position: relative
-      width: 100%
+      width: 97%
+      padding-bottom: 20px
       img
         margin: 0
 // @media only screen and (max-width : 320px)
