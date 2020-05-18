@@ -71,10 +71,9 @@ thumbnails.onmousedown = function () {
   let pageX = 0;
   document.onmousemove = function (e) {
     if (pageX !== 0) {
-      const persNum = (thumbnails.scrollLeft / (thumbnails.scrollWidth + thumbnails.getBoundingClientRect().width)) * 100;
+      const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
       thumbnails.scrollLeft = thumbnails.scrollLeft + (pageX - e.pageX);
-      scrollThumb.style.left =
-        ((thumbnailsWrapper.getBoundingClientRect().width + scrollThumb.getBoundingClientRect().width + 10) * persNum) / 100 + "px";
+      scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
     }
     pageX = e.pageX;
   };
