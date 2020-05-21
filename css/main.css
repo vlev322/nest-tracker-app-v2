@@ -9,7 +9,6 @@ body {
   font-family: Montserrat;
   font-weight: bold;
   color: #000;
-  background-color: rgba(0, 255, 255, 0.06);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
@@ -126,54 +125,56 @@ header {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 35px 0; }
+    padding: 15px 0; }
     /* line 88, ../sass/main.sass */
-    .slides-page .slides article, .slides-page .slides article .img {
+    .slides-page .slides article, .slides-page .slides article img {
       -webkit-box-shadow: 4px -4px 11px -3px rgba(0, 0, 0, 0.75);
       box-shadow: 4px -4px 11px -3px rgba(0, 0, 0, 0.75); }
     /* line 92, ../sass/main.sass */
     .slides-page .slides article {
-      max-width: 500px;
+      max-width: 520px;
       background: #F1DB6D;
       padding: 25px;
       border-radius: 90px;
       text-align: center; }
       /* line 98, ../sass/main.sass */
-      .slides-page .slides article .img {
-        height: 150px;
-        width: 150px;
+      .slides-page .slides article img {
+        height: 165px;
+        width: 165px;
         border-radius: 50%;
-        background-color: lightblue;
         margin: 0 auto; }
-      /* line 104, ../sass/main.sass */
+      /* line 103, ../sass/main.sass */
       .slides-page .slides article h3 {
-        font-size: 22px; }
-      /* line 106, ../sass/main.sass */
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 30px; }
+      /* line 107, ../sass/main.sass */
       .slides-page .slides article i {
         font-weight: 500;
         font-size: 18px; }
-      /* line 109, ../sass/main.sass */
+      /* line 110, ../sass/main.sass */
       .slides-page .slides article .rate {
         margin-top: 35px;
         font-size: 20px; }
-  /* line 112, ../sass/main.sass */
+  /* line 113, ../sass/main.sass */
   .slides-page .logo-composition {
     text-align: center; }
-    /* line 114, ../sass/main.sass */
+    /* line 115, ../sass/main.sass */
     .slides-page .logo-composition h3 {
       font-size: 44px;
       margin: 0; }
-    /* line 117, ../sass/main.sass */
+    /* line 118, ../sass/main.sass */
     .slides-page .logo-composition img {
-      height: 80px;
-      width: auto; }
+      height: 85px;
+      width: auto;
+      margin-bottom: 10px; }
 
-/* line 122, ../sass/main.sass */
+/* line 124, ../sass/main.sass */
 .slider-container {
   width: 80%;
   margin: 0 auto;
   position: relative; }
-  /* line 126, ../sass/main.sass */
+  /* line 128, ../sass/main.sass */
   .slider-container .control-left, .slider-container .control-right {
     position: absolute;
     display: -webkit-box;
@@ -195,17 +196,17 @@ header {
     font-weight: normal;
     z-index: 3;
     width: 10%; }
-    /* line 140, ../sass/main.sass */
+    /* line 142, ../sass/main.sass */
     .slider-container .control-left:hover, .slider-container .control-right:hover {
       background-color: rgba(0, 0, 0, 0.2);
       color: #edd55a; }
-  /* line 143, ../sass/main.sass */
+  /* line 145, ../sass/main.sass */
   .slider-container .control-left {
     left: 0; }
-  /* line 145, ../sass/main.sass */
+  /* line 147, ../sass/main.sass */
   .slider-container .control-right {
     right: 0; }
-  /* line 147, ../sass/main.sass */
+  /* line 149, ../sass/main.sass */
   .slider-container .slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -219,11 +220,11 @@ header {
     position: relative;
     cursor: -webkit-zoom-in;
     cursor: zoom-in; }
-    /* line 153, ../sass/main.sass */
+    /* line 155, ../sass/main.sass */
     .slider-container .slide img {
       width: 100%; }
 
-/* line 155, ../sass/main.sass */
+/* line 157, ../sass/main.sass */
 .thumbnails {
   overflow-y: scroll;
   display: -webkit-box;
@@ -233,35 +234,35 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  /* line 159, ../sass/main.sass */
+  /* line 161, ../sass/main.sass */
   .thumbnails div {
     height: 200px;
     margin: 0 12px;
     cursor: pointer; }
-    /* line 163, ../sass/main.sass */
+    /* line 165, ../sass/main.sass */
     .thumbnails div:first-child {
       margin-left: 0; }
-    /* line 165, ../sass/main.sass */
+    /* line 167, ../sass/main.sass */
     .thumbnails div img {
       height: 100%;
       width: auto; }
-  /* line 169, ../sass/main.sass */
+  /* line 171, ../sass/main.sass */
   .thumbnails::-webkit-scrollbar {
     width: 0px;
     height: 0px; }
 
-/* line 173, ../sass/main.sass */
+/* line 175, ../sass/main.sass */
 .thumbnails-wrapper {
   margin: 0 auto;
   width: 80%;
   margin-bottom: 50px; }
-  /* line 177, ../sass/main.sass */
+  /* line 179, ../sass/main.sass */
   .thumbnails-wrapper #scroller {
     position: relative;
     height: 1px;
     background: #000;
     margin: 30px 0; }
-    /* line 182, ../sass/main.sass */
+    /* line 184, ../sass/main.sass */
     .thumbnails-wrapper #scroller div {
       position: absolute;
       height: 23px;
@@ -271,7 +272,7 @@ header {
       top: -11px;
       cursor: pointer; }
 
-/* line 191, ../sass/main.sass */
+/* line 193, ../sass/main.sass */
 .slider-container.full-screen .slide {
   height: 100%;
   width: 100%;
@@ -282,16 +283,16 @@ header {
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
   background-color: rgba(0, 0, 0, 0.7); }
-/* line 200, ../sass/main.sass */
+/* line 202, ../sass/main.sass */
 .slider-container.full-screen .control-left, .slider-container.full-screen .control-right {
   position: fixed; }
 
-/* line 204, ../sass/main.sass */
+/* line 206, ../sass/main.sass */
 section.contact-us {
   height: 100%;
   padding-bottom: 40px; }
 
-/* line 207, ../sass/main.sass */
+/* line 209, ../sass/main.sass */
 .contact-us {
   position: relative;
   display: -webkit-box;
@@ -300,7 +301,7 @@ section.contact-us {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  /* line 212, ../sass/main.sass */
+  /* line 214, ../sass/main.sass */
   .contact-us aside {
     left: 0;
     top: 0;
@@ -320,34 +321,34 @@ section.contact-us {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 10px; }
-    /* line 222, ../sass/main.sass */
+    /* line 224, ../sass/main.sass */
     .contact-us aside img {
       margin-top: 100px;
       height: 80px;
       width: auto; }
-    /* line 226, ../sass/main.sass */
+    /* line 228, ../sass/main.sass */
     .contact-us aside a {
       text-decoration: none;
       color: #000000;
       font-weight: 500;
       font-size: 15px;
       margin-top: 20px; }
-    /* line 232, ../sass/main.sass */
+    /* line 234, ../sass/main.sass */
     .contact-us aside h3 {
       margin-bottom: 0;
       font-size: 18px; }
 
-/* line 235, ../sass/main.sass */
+/* line 237, ../sass/main.sass */
 form {
   max-width: 805px;
   margin-left: 50px;
   margin-top: 100px; }
-  /* line 239, ../sass/main.sass */
+  /* line 241, ../sass/main.sass */
   form h2 {
     font-size: 40px;
     text-align: center;
     font-weight: bolder; }
-  /* line 244, ../sass/main.sass */
+  /* line 246, ../sass/main.sass */
   form div input {
     border-radius: 8px;
     height: 45px;
@@ -358,23 +359,23 @@ form {
     margin-bottom: 40px;
     border: none;
     margin-right: 40px; }
-    /* line 254, ../sass/main.sass */
+    /* line 256, ../sass/main.sass */
     form div input::-webkit-input-placeholder {
       color: #000000; }
-    /* line 256, ../sass/main.sass */
+    /* line 258, ../sass/main.sass */
     form div input::-moz-placeholder {
       color: #000000; }
-    /* line 258, ../sass/main.sass */
+    /* line 260, ../sass/main.sass */
     form div input:-moz-placeholder {
       color: #000000; }
-    /* line 260, ../sass/main.sass */
+    /* line 262, ../sass/main.sass */
     form div input:-ms-input-placeholder {
       color: #000000;
       margin-bottom: 30px; }
-    /* line 263, ../sass/main.sass */
+    /* line 265, ../sass/main.sass */
     form div input input:last-child {
       margin-right: 0; }
-  /* line 265, ../sass/main.sass */
+  /* line 267, ../sass/main.sass */
   form button {
     text-transform: uppercase;
     border-radius: 10px;
@@ -386,7 +387,7 @@ form {
     border: none;
     cursor: pointer;
     margin-bottom: 40px; }
-  /* line 276, ../sass/main.sass */
+  /* line 278, ../sass/main.sass */
   form .textarea {
     font-family: Montserrat;
     border-radius: 8px;
@@ -409,20 +410,16 @@ form {
     margin-right: 0; }
 
 @media only screen and (max-width: 1200px) {
-  /* line 297, ../sass/main.sass */
+  /* line 299, ../sass/main.sass */
   .main-wrapper > section:first-child h1 {
     font-size: 40px; }
-  /* line 300, ../sass/main.sass */
+  /* line 302, ../sass/main.sass */
   .main-wrapper > section:first-child > div img {
     height: 400px; }
 
-  /* line 303, ../sass/main.sass */
-  .slides-page .slides {
-    padding: 0;
-    padding-top: 40px; }
-    /* line 306, ../sass/main.sass */
-    .slides-page .slides article {
-      max-width: 410px; } }
+  /* line 306, ../sass/main.sass */
+  .slides-page .slides article {
+    max-width: 410px; } }
 @media only screen and (max-width: 992px) {
   /* line 310, ../sass/main.sass */
   .slides-page .slides article {
