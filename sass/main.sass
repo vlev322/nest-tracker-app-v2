@@ -14,22 +14,24 @@ header
   justify-content: space-between
   align-items: center
   background: #F3E288
-  padding-left: 50px
+  padding: 0 10px
+  padding-left: 60px
   ul
     display: flex
     li
       text-transform: uppercase
       list-style-type: none
-      margin-right: 80px
+      margin-right: 70px
+      &:first-child
+        margin-right: 85px
       a
         white-space: nowrap
         text-decoration: none
         color: #000000
         font-size: 18px
   img
-    height: 80px
+    height: 85px
     width: auto
-
 .main-wrapper
   >section
     padding: 25px
@@ -42,7 +44,7 @@ header
       padding-bottom: 110px
       background-image: url('../assets/img/bg_&_logos/welcome_bg.jpg')
       background-size: cover
-      background-position-y: 60%
+      background-position-y: 62%
       h1
         font-size: 38px
         margin: 0px
@@ -63,7 +65,7 @@ header
           width: auto
         section
           text-align: center
-          margin-left: 110px
+          margin-left: 50px
           margin-top: -100px
           img
             height: 80px
@@ -71,13 +73,6 @@ header
 section.feature-layout img
   width: 100%
 
-.main-wrapper
-  >section
-    &:last-child
-      margin: 0
-      padding: 0
-      background-image: url('../assets/img/bg_&_logos/сontact_us_bg.jpg')
-      background-size: cover
 .slides-page
   display: flex
   justify-content: center
@@ -85,7 +80,7 @@ section.feature-layout img
   padding-bottom: 20px
   .slides
     display: flex
-    justify-content: space-around
+    justify-content: center
     padding: 15px 0
     article, article img
       -webkit-box-shadow: 4px -4px 11px -3px rgba(0,0,0,0.75)
@@ -97,6 +92,10 @@ section.feature-layout img
       padding: 25px
       border-radius: 90px
       text-align: center
+      position: relative
+      padding-bottom: 70px
+      &:first-child
+        margin-right: 100px
       img
         height: 165px
         width: 165px
@@ -110,8 +109,12 @@ section.feature-layout img
         font-weight: 500
         font-size: 18px
       .rate
+        position: absolute
+        bottom: 20px
         margin-top: 35px
         font-size: 20px
+        left: 0
+        right: 0
   .logo-composition
     text-align: center
     h3
@@ -205,34 +208,36 @@ section.feature-layout img
     position: fixed
 
 //Contact us
+
 section.contact-us
+  margin: 0
+  padding: 0
+  background-image: url('../assets/img/bg_&_logos/сontact_us_bg.jpg')
+  background-size: cover
+  background-position-y: 32%
   height: 100%
-  padding-bottom: 40px
-.contact-us
   position: relative
   display: flex
-  // align-items: center
   justify-content: flex-start
   aside
-    left: 0
-    top: 0
     max-width: 310px
     background-color: rgba(255, 255, 255, .6)
     display: flex
     align-items: center
-    justify-content: start
+    justify-content: center
     flex-direction: column
-    padding: 0 10px
+    padding: 0 60px
     img
-      margin-top: 100px
-      height: 80px
+      margin-top: -100px
+      height: 90px
       width: auto
     a
       text-decoration: none
       color: #000000
       font-weight: 500
       font-size: 15px
-      margin-top: 20px
+      margin-top: 25px
+      margin-bottom: 20px
     h3
       margin-bottom: 0
       font-size: 18px
@@ -240,6 +245,7 @@ form
   max-width: 805px
   margin-left: 50px
   margin-top: 100px
+  margin-bottom: 100px
   h2
     font-size: 40px
     text-align: center
