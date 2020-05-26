@@ -31,7 +31,9 @@ const isOutside = function (pos) {
 controlls[0].addEventListener("click", function () {
   current -= 1;
   isOutside(current);
-  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current - Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
+  thumbnails.scrollLeft =
+    Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current -
+    Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
   const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
   scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
   slideImg.setAttribute("src", "./assets/img/slides/Nest Tracker App Presentation- Page-" + current + ".jpg");
@@ -40,7 +42,9 @@ controlls[0].addEventListener("click", function () {
 controlls[1].addEventListener("click", function () {
   current += 1;
   isOutside(current);
-  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current - Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
+  thumbnails.scrollLeft =
+    Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current -
+    Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
   const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
   scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
   slideImg.setAttribute("src", "./assets/img/slides/Nest Tracker App Presentation- Page-" + current + ".jpg");
@@ -49,6 +53,20 @@ controlls[1].addEventListener("click", function () {
 // controll thumbnail moving
 scrollThumb.ondragstart = function () {
   return false;
+};
+
+scrollThumb.ontouchstart = function (e) {
+  var t = /touch/.test(e.type) ? e.targetTouches[0] : e.target;
+  const avalibleWidthThumb = thumbnailsWrapper.getBoundingClientRect().width;
+  const shiftX = t.pageX - scrollThumb.getBoundingClientRect().left + thumbnailsWrapper.getBoundingClientRect().left;
+  document.ontouchmove = function (e) {
+    var t = /touch/.test(e.type) ? e.targetTouches[0] : e.target;
+    const left = t.clientX - shiftX;
+    if (left >= 0 && left <= avalibleWidthThumb - scrollThumb.getBoundingClientRect().width + 5) {
+      thumbnails.scrollLeft = (thumbnails.scrollWidth * ((left / avalibleWidthThumb) * 100)) / 100;
+      scrollThumb.style.left = left + "px";
+    }
+  };
 };
 
 scrollThumb.onmousedown = function (e) {
@@ -75,7 +93,8 @@ thumbnails.onmousedown = function () {
   let pageX = 0;
   document.onmousemove = function (e) {
     if (pageX !== 0) {
-      const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
+      const persNum =
+        ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
       thumbnails.scrollLeft = thumbnails.scrollLeft + (pageX - e.pageX);
       scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
     }
