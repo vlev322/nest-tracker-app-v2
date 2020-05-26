@@ -89,6 +89,20 @@ scrollThumb.onmousedown = function (e) {
   };
 };
 
+thumbnails.ontouchstart = function () {
+  let pageX = 0;
+  document.ontouchmove = function (e) {
+    var t = /touch/.test(e.type) ? e.targetTouches[0] : e.target;
+    if (pageX !== 0) {
+      const persNum =
+        ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
+      thumbnails.scrollLeft = thumbnails.scrollLeft + (pageX - t.pageX);
+      scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
+    }
+    pageX = t.pageX;
+  };
+};
+
 thumbnails.onmousedown = function () {
   let pageX = 0;
   document.onmousemove = function (e) {

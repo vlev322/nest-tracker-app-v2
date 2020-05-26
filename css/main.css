@@ -481,12 +481,18 @@ form {
   .thumbnails-wrapper {
     max-width: 750px;
     margin-top: 20px; }
-    .thumbnails-wrapper #scroller {
-      display: none; }
 
   .thumbnails div {
     height: 150px;
     width: 250px; }
+
+  .thumbnails-wrapper #scroller div {
+    position: absolute;
+    height: 20px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: #707070;
+    top: -10px; }
 
   section.contact-us aside {
     padding: 0 15px; }
@@ -527,6 +533,9 @@ form {
         margin-left: 20px; }
         .main-wrapper > section:first-child > div section img {
           height: 40px; }
+
+  #scroller {
+    display: none; }
 
   .slides-page .logo-composition h3 {
     font-size: 38px; }
