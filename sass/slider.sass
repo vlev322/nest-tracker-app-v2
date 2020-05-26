@@ -1,11 +1,13 @@
-
+// slider
 .slider-container
-  height: 550px
-  max-width: 950px
+  width: 80%
   margin: 0 auto
   position: relative
   .control-left, .control-right
     position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
     cursor: pointer
     height: 100%
     transition: all .5s
@@ -14,18 +16,14 @@
     font-size: 80px
     font-weight: normal
     z-index: 3
-    display: flex
-    align-items: center
+    width: 10%
     &:hover
       background-color: rgba(000, 000, 000, .2)
       color: rgb(237, 213, 90)
   .control-left
     left: 0
-    padding-left: 5px
   .control-right
     right: 0
-    padding-right: 5px
-    text-align: right
   .slide
     display: flex
     align-items: center
@@ -33,17 +31,13 @@
     position: relative
     cursor: zoom-in
     img
-      // height: -webkit-fill-available
       width: 100%
 .thumbnails
   overflow-y: scroll
-  // display: -webkit-box
-  // display: -moz-box
-  display: block
+  display: flex
+  flex-direction: row
   div
-    height: 170px
-    width: 300px
-    background: lightblue
+    height: 200px
     margin: 0 12px
     cursor: pointer
     &:first-child
@@ -58,32 +52,30 @@
 
 .thumbnails-wrapper
   margin: 0 auto
-  max-width: 950px
+  width: 80%
+  margin-bottom: 50px
   #scroller
     position: relative
-    height: 1px
-    background: #000
-    margin: 20px 0
+    height: 2px
+    background: #B2B2B2
+    margin: 30px 0
     div
       position: absolute
-      height: 20px
-      width: 60px
-      border-radius: 3px
-      background-color: #464545
-      top: -9px
+      height: 30px
+      width: 110px
+      border-radius: 5px
+      background-color: #707070
+      top: -13px
       cursor: pointer
 .slider-container.full-screen
   .slide
-    height: 100vh
-    width: 100vw
+    height: 100%
+    width: 100%
     top: 0
     left: 0
     z-index: 2
     position: fixed
     cursor: zoom-out
+    background-color: rgba(000, 000, 000, .7)
   .control-left, .control-right
     position: fixed
-  .control-left
-    left: 30px
-  .control-right
-    right: 30px

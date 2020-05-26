@@ -1,9 +1,9 @@
+const QUANTITY_SLISDES = 32;
 const sliderContainer = document.getElementById("slider-container");
 const slide = document.getElementById("slide");
 const thumbnails = document.getElementById("thumbnails");
 const scroller = document.getElementById("scroller");
 const thumbnailsWrapper = document.getElementsByClassName("thumbnails-wrapper")[0];
-
 const slideImg = slide.querySelector("img");
 const controlls = sliderContainer.querySelectorAll("div");
 const scrollThumb = scroller.querySelectorAll("div")[0];
@@ -31,14 +31,18 @@ const isOutside = function (pos) {
 controlls[0].addEventListener("click", function () {
   current -= 1;
   isOutside(current);
-  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / 32) * current - Math.trunc(thumbnails.scrollWidth / 32);
+  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current - Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
+  const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
+  scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
   slideImg.setAttribute("src", "./assets/img/slides/Nest Tracker App Presentation- Page-" + current + ".jpg");
 });
 
 controlls[1].addEventListener("click", function () {
   current += 1;
   isOutside(current);
-  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / 32) * current - Math.trunc(thumbnails.scrollWidth / 32);
+  thumbnails.scrollLeft = Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES) * current - Math.trunc(thumbnails.scrollWidth / QUANTITY_SLISDES);
+  const persNum = ((thumbnails.scrollLeft + scrollThumb.getBoundingClientRect().width) / thumbnails.scrollWidth) * 100; //+ thumbnails.getBoundingClientRect().width)
+  scrollThumb.style.left = (thumbnailsWrapper.getBoundingClientRect().width * persNum) / 100 + "px";
   slideImg.setAttribute("src", "./assets/img/slides/Nest Tracker App Presentation- Page-" + current + ".jpg");
 });
 
