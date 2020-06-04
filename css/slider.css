@@ -17,7 +17,6 @@
     z-index: 3;
     width: 10%; }
     .slider-container .control-left:hover, .slider-container .control-right:hover {
-      background-color: rgba(0, 0, 0, 0.2);
       color: #edd55a; }
   .slider-container .control-left {
     left: 0; }

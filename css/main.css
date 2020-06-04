@@ -18,7 +18,6 @@
     z-index: 3;
     width: 10%; }
     .slider-container .control-left:hover, .slider-container .control-right:hover {
-      background-color: rgba(0, 0, 0, 0.2);
       color: #edd55a; }
   .slider-container .control-left {
     left: 0; }
@@ -110,7 +109,8 @@ header {
         white-space: nowrap;
         text-decoration: none;
         color: #000000;
-        font-size: 18px; }
+        font-size: 18px;
+        font-weight: normal; }
   header img {
     height: 85px;
     width: auto; }
@@ -195,7 +195,7 @@ section.feature-layout img {
         margin-right: 100px; }
       .slides-page .slides article img {
         height: 170px;
-        width: 170px;
+        width: auto;
         border-radius: 50%;
         margin: 0 auto; }
       .slides-page .slides article h3 {
@@ -319,6 +319,100 @@ form {
     font-size: 16px;
     margin-right: 0; }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 2400px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 2400px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 2400px), only screen and (min-device-pixel-ratio: 2) and (min-width: 2400px), only screen and (min-resolution: 192dpi) and (min-width: 2400px), only screen and (min-resolution: 2dppx) and (min-width: 2400px) {
+  header {
+    padding-left: 100px; }
+    header img {
+      height: 150px; }
+    header ul li {
+      margin-right: 130px; }
+      header ul li:first-child {
+        margin-right: 160px; }
+      header ul li a {
+        font-size: 32px;
+        font-weight: 800; }
+
+  .main-wrapper > section:first-child h1 {
+    font-size: 80px; }
+  .main-wrapper > section:first-child h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-top: 20px; }
+  .main-wrapper > section:first-child > div {
+    margin-top: 200px; }
+    .main-wrapper > section:first-child > div img {
+      height: 100%;
+      max-height: 950px; }
+    .main-wrapper > section:first-child > div section img {
+      height: 150px; }
+
+  .slides-page .logo-composition img {
+    height: 150px; }
+  .slides-page .logo-composition h3 {
+    font-size: 75px;
+    font-weight: 800;
+    margin-top: 20px; }
+  .slides-page .slides article {
+    max-width: 38%;
+    min-height: 63vh;
+    border-radius: 170px;
+    padding: 45px; }
+    .slides-page .slides article:first-child {
+      margin-right: 200px; }
+    .slides-page .slides article img {
+      height: 300px; }
+    .slides-page .slides article h3 {
+      font-size: 46px; }
+    .slides-page .slides article i {
+      font-size: 36px;
+      line-height: 1.3; }
+    .slides-page .slides article .rate {
+      margin-top: 50px;
+      font-size: 48px;
+      margin-bottom: 25px; }
+
+  form {
+    max-width: 100%;
+    margin-left: 70px; }
+    form div {
+      margin-right: 20px; }
+      form div input {
+        font-size: 30px;
+        width: 600px;
+        height: 70px;
+        margin-bottom: 70px;
+        padding-left: 15px;
+        border-radius: 15px; }
+    form .textarea {
+      width: 1255px;
+      font-size: 30px;
+      margin-right: 20px;
+      height: 165px;
+      border-radius: 30px;
+      padding: 20px; }
+    form button {
+      margin-right: 20px;
+      padding: 45px 100px;
+      font-size: 36px;
+      border-radius: 35px;
+      margin-top: 35px; }
+    form h2 {
+      font-size: 75px; }
+
+  section.contact-us {
+    background-position-y: 14%; }
+    section.contact-us aside {
+      padding: 150px; }
+      section.contact-us aside img {
+        height: 150px;
+        margin-top: -250px; }
+      section.contact-us aside h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        letter-spacing: normal;
+        font-weight: 700; }
+      section.contact-us aside a {
+        font-size: 30px; } }
 @media only screen and (max-width: 1200px) {
   .main-wrapper > section:first-child h1 {
     font-size: 40px; }
